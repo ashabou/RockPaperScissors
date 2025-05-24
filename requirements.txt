@@ -1,0 +1,6 @@
+ultralytics # YOLOv8 library
+opencv-python
+torch                # PyTorch (or tensorflow if you use TF)
+numpy
+matplotlib
+tqdm
