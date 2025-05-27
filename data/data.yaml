@@ -1,9 +1,9 @@
-train: ../train/images
-val: ../valid/images
-test: ../test/images
+train: train/images
+val: valid/images
+test: test/images
 
 nc: 3
-names: ['Paper', 'Rock', 'Scissors']
+names: ["Paper", "Rock", "Scissors"]
 
 roboflow:
   workspace: roboflow-58fyf
