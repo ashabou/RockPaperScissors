@@ -1,6 +1,6 @@
 # Rock-Paper-Scissors Detection with YOLOv8
 
-This project is a real-time **Rock-Paper-Scissors** game played by two people in front of a webcam. It uses a YOLOv8 model to detect hand gestures (`Rock`, `Paper`, or `Scissors`) and automatically determines the winner of each round.
+This project is a real-time **Rock-Paper-Scissors** game played by two people in front of a webcam. It uses a YOLOv8 model to detect hand gestures (`Rock`, `Paper`, or `Scissors`) and automatically detects the winner when both hands are stable, and includes a cooldown timer to prevent repeated detections too quickly.
 
 ---
 
@@ -42,8 +42,8 @@ python main.py
 
 **Controls:**
 
-- Press **`x`** to capture the current frame and detect gestures.
 - Press **`c`** to clear the winner display.
+- Press **`x`** to restart the game if a player has won.
 - Press **`q`** to quit the application.
 
 ---
@@ -57,10 +57,10 @@ python main.py
 
 ## Game Display
 
-- Bounding boxes are displayed live around detected hands.
-- Each box is labeled with the player number.
-- Player scores are shown at the top and update after each capture.
-- The winner of the current round is displayed below the scores.
+- When both players show a gesture and hold their hands stable for a short period, the system automatically detects the winner.
+- A cooldown timer (5 seconds by default) is shown at the bottom of the screen after each detection to ensure gestures aren't detected repeatedly too quickly.
+- Scores are tracked, and the game ends when one player reaches 3 points.
+- You can press **`x`** to reset and play again.
 
 ---
 
