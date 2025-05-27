@@ -1,14 +1,11 @@
 import cv2
 from ultralytics import YOLO
 from src.game_logic import determine_winner, update_score
+from src.config import MODEL_PATH, CLASS_NAMES, CONFIDENCE_THRESHOLD, CAMERA_INDEX
 
-# Load model and config
-model = YOLO("runs/detect/train/weights/best.pt")
-CLASS_NAMES = ['Paper','Rock', 'Scissors']
-CONFIDENCE_THRESHOLD = 0.5
-
+model = YOLO(MODEL_PATH)
 def main():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(CAMERA_INDEX)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 960)
     if not cap.isOpened():
