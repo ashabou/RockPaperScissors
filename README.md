@@ -42,8 +42,7 @@ python main.py
 
 **Controls:**
 
-- Press **`c`** to clear the winner display.
-- Press **`x`** to restart the game if a player has won.
+- Press **`x`** to restart the game.
 - Press **`q`** to quit the application.
 
 ---

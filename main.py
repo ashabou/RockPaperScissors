@@ -129,12 +129,10 @@ def main():
 
         key = cv2.waitKey(1) & 0xFF
 
-        if key == ord('x') and game_over:
+        if key == ord('x'):
             score = [0, 0]
             last_winner = ""
             game_over = False
-        elif key == ord('c'):
-            last_winner = ""
         elif key == ord('q'):
             break
 
